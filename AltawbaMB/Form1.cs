@@ -19,10 +19,6 @@ namespace AltawbaMB
         public AltawbaMB()
         {
             InitializeComponent();
-            //إضافة معطل البرامج إلى بدء التشغيل التلقائي مع تشغيل الويندوز
-            //"
-            RegistryKey key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);            
-            key.SetValue("AltawbaMB", Application.ExecutablePath); //" م1 بتصرف
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -32,7 +28,7 @@ namespace AltawbaMB
             foreach (var process in Process.GetProcessesByName("tor"))
             {
                 process.Kill();
-            } //" م2 بتصرف
+            } //" م1 بتصرف
         }
     }
 }
@@ -40,9 +36,5 @@ namespace AltawbaMB
 //مصادر أكواد البرنامج
 
     //المصدر م1
-    //mamal, Stack Overflow, https://stackoverflow.com/a/53475843, 
-    //CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/
-
-    //المصدر م2
     //ConsultUtah, Stack Overflow, https://stackoverflow.com/a/3345421, 
     //CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/
