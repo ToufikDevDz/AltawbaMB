@@ -23,7 +23,8 @@ namespace AltawbaMB
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //Tor Browser إيقاف برنامج
+            //إيقاف تشغيل البرامج كل 5 ثواني
+            //Tor Browser إيقاف تشغيل متصفح
             //"
             foreach (var process in Process.GetProcessesByName("tor"))
             {
