@@ -30,6 +30,22 @@ namespace AltawbaMB
             {
                 process.Kill();
             } //" م1 بتصرف
+
+            //Baidu (Spark) Browser إيقاف تشغيل متصفح
+            foreach (var process2 in Process.GetProcessesByName("spark"))
+            {
+                process2.Kill();
+            }
+        }
+
+        private void AltawbaMB_Activated(object sender, EventArgs e)
+        {
+            //alt+tab لإخفاء البرنامج من قائمة 
+            //ومن مدير المهام أقل التفاصيل؟ ومن قائمة طريقة عرض المهمة في ويندوز 10
+            Hide();
+
+            //ليعمل جيدا اترك الميزة
+            //WindowState = Normal
         }
     }
 }

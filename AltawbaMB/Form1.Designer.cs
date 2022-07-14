@@ -54,8 +54,9 @@ namespace AltawbaMB
             this.RightToLeftLayout = true;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AltawbaMB";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.Activated += new System.EventHandler(this.AltawbaMB_Activated);
             this.ResumeLayout(false);
 
         }
